@@ -36,6 +36,20 @@ function App() {
           </button>
         </form>
       </div>
+      <div className="container">
+        {
+          images.map(image => (
+            <div key={image.id} className="card">
+              <img src={image.urls.regular} className="card-img"/>
+              <div className="card-content">
+                <div className="card-title">
+                  {image.alt_description}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   );
 }
